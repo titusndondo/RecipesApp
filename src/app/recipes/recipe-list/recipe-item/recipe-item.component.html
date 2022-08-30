@@ -1,0 +1,8 @@
+<div class="recipe-card">
+  <img src="{{ recipe.imageURL }}" alt="{{ recipe.name }}" class="" style="height: 10rem; width: 13.3rem">
+  <div class="card-content">
+    <a class="card-hearder-link" href=""><h3 class="card-header">{{ recipe.name }}</h3></a>
+    <p class="card-text">{{ recipe.steps.join(' ').slice(0, 50) }}...</p>
+    <p class="card-muted-text">Last updated on {{ recipe.date }}</p>
+  </div>
+</div>

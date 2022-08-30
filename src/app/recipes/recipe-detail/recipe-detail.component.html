@@ -1,0 +1,38 @@
+<div class="recipe-details u-margin-top-md">
+  <div>
+    <div class="recipe-details__header">
+      <h2 class="details-header"> {{ selectedRecipeData?.name }}</h2>
+      <a (click)="onEdit()" 
+         *ngIf="selectedRecipeData?.name" 
+         class="btn btn-dark">Edit</a>
+    </div>
+
+    <div class="recipe-image">
+      <img class="image u-margin-top-md" [src]="selectedRecipeData?.imageURL" alt="">
+      <div>
+        <label for="upload-pic"><i (click)="onChangePicture()" class="fas fa-camera fa-3x btn"></i></label>
+        <input class="hidden" type="file" name="upload-pic" id="upload-pic">
+      </div>
+      
+    </div>
+    
+    <div class="recipe-details__description u-margin-top-md">
+      <p class="recipe-paragraph">{{ selectedRecipeData?.steps.join(' ') }}</p>
+    </div>
+  </div>
+
+  <div *ngIf="selectedRecipeData?.name" class="recipe-details__ingredients u-margin-top-md">
+    <h3 class="header u-margin-bottom-md">Ingredients</h3>
+    <ul class="">
+      <app-ingredients 
+        *ngFor="let ingredientEl of selectedRecipeData?.ingredients" 
+        [ingredient]="ingredientEl">
+      </app-ingredients>
+    </ul>
+  </div>
+  <!-- <div #recipeNotSelected>
+    ; else recipeNotSelected
+    Please select a recipe on the left.
+  </div> -->
+
+</div>

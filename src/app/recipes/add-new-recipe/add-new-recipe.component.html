@@ -1,0 +1,63 @@
+<form class="form-group u-margin-top-md" [formGroup]="recipeForm" (ngSubmit)="onSubmit($event)">
+  <div class="form-control">
+    <label class="form-label" for="title"><h3>Title</h3></label>
+    <div>
+      <input class="form-input" type="text" name="title" id="title" formControlName="title">
+    </div>
+  </div>
+  <div class="form-control custom-file">
+    <label class="form-label" for="image"><h3>Image</h3></label>
+    <div class="image-input" (change)="onChooseFile($event)" [ngClass]="{'image-input-focus': imageUploadActive}">
+      <p class="image-name">{{ imageName }}</p>
+      <input (change)="onChangeImage($event)" class="form-input custom-file-input" type="file" name="image" id="image"> 
+      <label class="custom-file-label" for="image">Choose file</label>
+    </div>
+    <!-- formControlName="image" -->
+    <small class="file-types">Max size 3Mbs [png, jpeg, etc]</small>
+  </div>
+
+  <div class="form-control">
+    <label class="form-label" for="details"><h3>Details</h3></label>
+    <!-- <textarea class="form-input" type="text" name="details" id="steps"></textarea> -->
+    <ckeditor [editor]="Editor" data="" formControlName="details" (change)="onChange($event)"></ckeditor>
+  </div>
+
+  <ol class="ingredients">
+    <app-shopping-item *ngFor="let item of ingredientItems" [item]="item"></app-shopping-item>
+  </ol>
+
+
+  <div class="ingredientsData">
+    <div class="form-control">
+      <label class="form-label" for="ingredient">
+        <h3>Ingredient</h3>
+      </label>
+      <div>
+        <input class="form-input" type="text" name="name" id="ingredient"
+          formControlName="ingr_name">
+      </div>
+    </div>
+    <div class="form-control">
+      <label class="form-label" for="quantity">
+        <h3>Quantity</h3>
+      </label>
+      <div>
+        <input class="form-input" type="text" name="ingredient" id="ingredient" formControlName="ingr_quantity">
+      </div>
+    </div>
+    
+    <div class="form-control">
+      <label class="form-label hidden" for="quantity">
+        <h3 class="">Quantity</h3>
+      </label>
+      <div class="">
+        <a class="btn btn-light2" href="">Add Item</a>
+      </div>
+    </div>
+  </div>
+  
+  
+  <div class="u-margin-top-md">
+    <button class="btn btn-dark btn-submit" type="submit">Submit</button>
+  </div>
+</form>

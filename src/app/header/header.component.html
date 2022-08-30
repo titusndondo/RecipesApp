@@ -1,0 +1,46 @@
+<nav class="navbar">
+  <div class="navbar__logo">
+    <a href="" class="logo">Recipe Book</a>
+  </div>
+  
+  <ul class="navbar__items">
+    <li class="navbar__items-item1">
+      <a href="" class="navbar__items-link" 
+        (click)="onNavigate($event, '')"
+        routerLink="/"
+        routerLinkActive="active"
+        [routerLinkActiveOptions]="{exact: true}" *ngIf="!isAuthenticated" >Home</a>
+    </li>
+    <li class="navbar__items-item1">
+      <a  href="" class="navbar__items-link"
+          (click)="onNavigate($event, 'recipes')"
+          routerLink="/recipes"
+          routerLinkActive="active" *ngIf="isAuthenticated" >Recipes</a>
+    </li>
+    <li class="navbar__items-item2">
+      <a  href="" class="navbar__items-link"
+          (click)="onNavigate($event, 'shopping-list')"
+          routerLink="/shopping-list"
+          routerLinkActive="active" *ngIf="isAuthenticated" >Shopping List</a>
+    </li>
+    <li class="navbar__items-item3">
+      <a href="" 
+          (click)="onShowDropDown($event)"
+          routerLinkActive="active"
+          class="navbar__items-link" *ngIf="isAuthenticated">
+        <i class="fas fa-user-cog"></i>
+        </a>
+    </li>
+    <!-- <ul class="dropdown" [ngClass]="{hidden: !showDropDown}">
+      <li class="dropdown-item">
+        <a class="dropdown-link navbar__items-link" href="" (click)="onNavigate($event, 'account')">Account</a>
+      </li>
+      <li class="dropdown-item">
+        <a class="dropdown-link navbar__items-link" href="" (click)="onLogout($event)">Logout</a>
+      </li>
+    </ul> -->
+    <div>
+      
+    </div>
+  </ul>
+</nav>

@@ -1,0 +1,43 @@
+.form-group {
+  display: flex;
+  justify-content: left;
+}
+
+.input {
+  margin: 3rem 0;
+  width: 100%;
+}
+
+.input:not(:first-child) {
+  margin-left: 3rem;
+}
+
+input {
+  width: 100%;
+  font-size: 1.6rem;
+  font-family: inherit;
+  text-align: center;
+  border-radius: 0.2rem;
+  border: 1px solid rgb(110, 106, 106);
+  padding: 0.5rem;
+}
+
+input:focus {
+  outline: none;
+  border-bottom: 3px solid rgb(110, 106, 106);
+  text-align: center;
+}
+
+.btn-group {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.btn-delete {
+  margin-left: 4.2rem;
+}
+
+.btn-checkout {
+  width: 100%;
+}

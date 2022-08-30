@@ -1,0 +1,17 @@
+.ingredient-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 100%;
+  margin-left: auto;
+  padding: 0.5rem;
+}
+
+.header {
+  color: rgb(65, 62, 62);
+  margin-bottom: 1.2rem;
+}
+
+.ingredient-name {
+  display: inline-block;
+}

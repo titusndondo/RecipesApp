@@ -1,0 +1,11 @@
+
+<div class="row">
+  <div class="shopping-cart">
+    <h3 class="shopping-cart-header">Shopping Cart</h3>
+    <hr>
+    <ol class="ingredients">
+      <app-shopping-item *ngFor="let item of cartItems" [item]="item"></app-shopping-item>
+    </ol>
+    <app-shopping-edit></app-shopping-edit>
+  </div>
+</div>

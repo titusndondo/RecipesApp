@@ -1,0 +1,12 @@
+<li class="ingredient-item">
+  <div>
+    <p class="ingredient-name" #ingredientItem>{{ ingredient.name }}</p>
+    <span class="ingredient-amount" #ingredientAmount>({{ ingredient.quantity }})</span>
+  </div>
+  <div>
+    <a (click)="onAddToCart($event, ingredientItem, ingredientAmount)" 
+       class="btn btn-light2 u-margin-bottom-md" href="">
+      <i class="fas fa-cart-plus"></i>
+    </a>
+  </div>
+</li>

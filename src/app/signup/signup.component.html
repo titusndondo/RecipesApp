@@ -1,0 +1,29 @@
+<div id="signup" [ngClass]="{blurred: isLoading}">
+  <div *ngIf="error" class="error-message">
+    <p>{{ error }}</p> <a href="" (click)="onCloseAlert($event)">&#9747;</a>
+  </div>
+  <form class="form-group" [formGroup]="signupForm" (ngSubmit)="onSubmit()">
+    <div *ngIf="isSignupMode" class="form-control">
+      <label for="username" class="control-label">Username</label>
+      <input type="text" class="control-input" id="username" name="username" formControlName="username">
+    </div>
+    <div class="form-control">
+      <label for="email" class="control-label">Email</label>
+      <input type="email" class="control-input" id="email" name="email" formControlName="email">
+    </div>
+    <div class="form-control">
+      <label for="password" class="control-label">Password</label>
+      <input type="password" class="control-input" id="password" name="password" formControlName="password">
+    </div>
+    <button type="submit" class="btn btn-dark btn-signup u-margin-top-md">{{ isSignupMode ? 'Signup' : 'Login' }}
+      <!-- <button class="hidden">Signupmode</button> -->
+    </button>
+    <small class="small-text">{{ isSignupMode ? 'Already': "Don't" }} have an account <a href="" (click)="onChangeForm($event)">
+      {{ isSignupMode ? 'Login' : 'Signup' }}
+    </a></small>
+  </form>
+  
+  <app-loading-spinner *ngIf="isLoading"></app-loading-spinner>
+  
+</div>
+

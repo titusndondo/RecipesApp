@@ -1,0 +1,23 @@
+<div>
+  <div *ngIf="addItem" class="form-group">
+  
+    <div class="input">
+      <label for="name">Name</label> <br>
+      <input type="text" id="name" #addedItemName>
+    </div>
+    <div class="input">
+      <label for="amount">Amount</label> <br>
+      <input type="number" id="amount" #addedItemAmount>
+    </div>
+  </div>
+  
+  <div class="btn-group u-margin-bottom-md u-margin-top-md">
+    <a (click)="onAddItem($event)" class="btn btn-light2" href="">Add Item</a>
+    <a class="btn btn-danger btn-delete" href="">Delete Item</a>
+    <a class="btn btn-danger btn-delete" href="">Clear Cart</a>
+  </div>
+  
+  <div>
+    <a class="btn btn-dark btn-checkout">CheckOut</a>
+  </div>
+</div>

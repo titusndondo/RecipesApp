@@ -1,0 +1,22 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgb(72, 70, 75);
+  height: 6rem;
+}
+
+.navbar__logo {
+  margin-left: 7rem;
+}
+
+.logo {
+  color: #f0ecec;
+  font-size: 3rem;
+  text-decoration: none;
+  margin-left: 3rem;
+}
+
+.active {
+  color: rgb(216, 216, 216);
+}

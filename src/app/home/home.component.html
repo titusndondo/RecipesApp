@@ -1,0 +1,20 @@
+
+
+  <header id="section-header">
+    <div class="row">
+      <div class="col-1-of-2">
+        <div class="hero">
+          <h1 class="hero-main"
+          >{{ !username ? 'Welcome to recipe book!' : 'Welcome back to recipe book ' + username + '. Enjoy' }}
+        </h1>
+          <p *ngIf="!username" class="hero-secondary">Please signup to have the best experience</p>
+          <a *ngIf="!username" class="btn btn-dark u-margin-top-md" (click)="onSignUp()">Signup</a>
+        </div>
+        
+      </div>
+      <div class="col-1-of-2">
+        <app-signup *ngIf="openSignUp"></app-signup>
+      </div>
+    </div>
+    
+  </header>

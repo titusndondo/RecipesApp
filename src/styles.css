@@ -1,1 +1,148 @@
 /* You can add global styles to this file, and also import other style files */
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.6rem;
+  font-family: "Lato", sans-serif;
+}
+
+.navbar__items {
+  width: 40rem;
+  display: flex;
+  justify-content: space-around;
+  list-style: none;
+  margin-right: 7rem;
+}
+
+.navbar__items-link:link,
+.navbar__items-link:visited {
+  color: rgb(120, 117, 126);
+  text-decoration: none;
+  transition: all 0.4s;
+}
+
+.navbar__items-link:hover {
+  color: rgb(216, 216, 216);
+  border-bottom: 2px solid rgb(216, 216, 216);
+}
+
+.u-margin-bottom-md {
+  margin-bottom: 4rem;
+}
+
+.u-margin-top-md {
+  margin-top: 4rem;
+}
+
+.btn,
+.btn:link,
+.btn:visited {
+  cursor: pointer;
+  padding: 1.5rem;
+  transition: all 0.3s;
+  text-decoration: none;
+  display: inline-block;
+  border-radius: 10rem;
+  transition: all 0.3s;
+}
+
+.btn:hover {
+  transform: translateY(-0.3rem);
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
+}
+
+.btn:active,
+.btn:focus {
+  outline: none;
+  transform: translateY(-0.1rem);
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+}
+
+.btn-dark {
+  background-color: rgb(65, 62, 62);
+  text-align: center;
+  color: rgb(236, 236, 236);
+  border-radius: 0.8rem;
+}
+
+.btn-light {
+  border: 1px solid rgb(65, 62, 62);
+  border-radius: 1rem;
+  padding: 0.05rem 1.5rem;
+}
+
+.btn-light:hover {
+  background-color: rgb(65, 62, 62);
+  color: rgb(236, 236, 236);
+}
+
+.btn-light2 {
+  border: 1px solid rgb(65, 62, 62);
+  border-radius: 0.5rem !important;
+  padding: 0.5rem 1.5rem !important;
+  color: rgb(65, 62, 62);
+  margin-bottom: 0.5rem;
+}
+.btn-light2:hover {
+  background-color: rgb(65, 62, 62);
+  color: rgb(236, 236, 236);
+}
+
+.btn-danger {
+  border: 1px solid rgb(238, 39, 39);
+  border-radius: 0.5rem !important;
+  padding: 0.5rem 1.5rem !important;
+  color: rgb(238, 39, 39);
+}
+
+.btn-danger:hover {
+  background-color: rgb(238, 39, 39);
+  color: rgb(236, 236, 236);
+}
+
+.row {
+  max-width: 114rem;
+  margin: 0 auto;
+}
+.row:not(:last-child) {
+  margin-bottom: 8rem;
+}
+.row::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.row [class^="col-"] {
+  float: left;
+}
+.row [class^="col-"]:not(:last-child) {
+  margin-right: 6rem;
+}
+.row .col-1-of-2 {
+  width: calc((100% - 6rem) / 2);
+}
+.row .col-1-of-3 {
+  width: calc((100% - 2 * 6rem) / 3);
+}
+.row .col-2-of-3 {
+  width: calc(100% - (calc((100% - 2 * 6rem) / 3) + 6rem));
+}
+.row .col-1-of-4 {
+  width: calc((100% - 3 * 6rem) / 4);
+}
+.row .col-2-of-4 {
+  width: calc((100% - 6rem) / 2);
+}
+.row .col-3-of-4 {
+  width: calc((((100% - 3 * 6rem) / 4) * 3) + (2 * 6rem));
+}

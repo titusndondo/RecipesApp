@@ -1,0 +1,55 @@
+.ingredient-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0.5rem auto;
+  border-bottom: 1px solid rgb(224, 224, 224);
+  padding: 0 3rem;
+  transition: all 0.2s;
+}
+
+.fa-check-circle {
+  margin-right: 1rem;
+  transition: all 0.2s;
+}
+
+.ingredient-item:hover,
+.fa-check-circle:hover {
+  transform: scale(1.05);
+  cursor: pointer;
+}
+
+.name {
+  margin: 1.5rem 0;
+}
+
+.fa-2x {
+  font-size: 2.2rem;
+}
+
+.quantity-input {
+  max-width: 10rem;
+}
+
+.input {
+  padding: 0.5rem;
+  width: 5rem;
+  font-size: inherit;
+}
+
+.input:focus {
+  outline: none;
+  border: 1px solid rgb(63, 62, 62);
+  border-radius: 2px;
+  box-shadow: 1rem 1rem 2rem rgba(0, 0, 0, 0.15);
+}
+
+.label {
+  margin-right: 1rem;
+}
+
+.name:hover,
+.fa-check-circle:hover {
+  transform: scale(1.05);
+  opacity: 1;
+}

@@ -1,0 +1,12 @@
+<li class="ingredient-item" >
+  <p (click)="onSelectCartItem($event)" class="name">
+    <a href=""  [ngStyle]="{color: !iconSelected ? 'rgb(63, 62, 62)' : 'rgb(27, 21, 21)'}">
+      <i [ngClass]="{'fa-2x': iconSelected}" class="far fa-check-circle"> </i>
+    </a> 
+    <span class="margin-bt" >{{ item.name }}</span>
+  </p>
+  <div class="quantity-input">
+    <label class="label" for="quantity">Qty</label>
+    <input class="input" type="number" id="quantity" [value]="item.amount">
+  </div>
+</li>

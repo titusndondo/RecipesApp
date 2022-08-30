@@ -1,0 +1,52 @@
+.recipe-card {
+  display: flex;
+  justify-content: space-between;
+  border: 1px solid rgb(224, 224, 224);
+  border-radius: 0.5rem;
+  padding: 2rem;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.recipe-card:hover {
+  transform: scale(1.05);
+  background-color: rgb(238, 238, 238);
+  box-shadow: 1rem 1rem 2rem rgba(0, 0, 0, 0.1);
+}
+
+.recipe-card:focus {
+  border: none;
+}
+
+.card-content {
+  margin-left: 1.5rem;
+  position: relative;
+}
+
+.card-header {
+  color: rgb(65, 62, 62);
+  margin-bottom: 1.2rem;
+}
+
+.card-hearder-link {
+  text-decoration: none;
+}
+
+.card-hearder:hover {
+  margin-bottom: 3px solid rgb(65, 62, 62);
+}
+
+.card-text {
+  margin-bottom: 1.2rem;
+}
+
+.card-muted-text {
+  margin-bottom: 1.2rem;
+  font-weight: 100;
+}
+
+.btn-details {
+  position: absolute;
+  top: 0.5%;
+  right: 0.5%;
+}
